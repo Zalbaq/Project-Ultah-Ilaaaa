@@ -258,6 +258,7 @@ const getBubbles = () => {
 
 window.addEventListener("load", () => {
   audio.volume = 0.1;
+  audio.play();
   getBubbles();
   textLoad();
   setInterval(textLoad, 16000);
