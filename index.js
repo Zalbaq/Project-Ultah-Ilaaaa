@@ -274,6 +274,7 @@ window.addEventListener("resize", () => {
 
 toggleMessage.addEventListener("click", () => {
   galery.classList.toggle("active");
+  audio.play();
   getSettingImage(widthGalery);
   getImageGalery();
 });
