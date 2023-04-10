@@ -258,12 +258,14 @@ const getBubbles = () => {
 
 window.addEventListener("load", () => {
   audio.volume = 0.1;
-  audio.play();
   getBubbles();
   textLoad();
   setInterval(textLoad, 16000);
   getSizeGalery(widthGalery);
   getSettingImage(widthGalery);
+});
+window.addEventListener("scroll", () => {
+  audio.play();
 });
 
 window.addEventListener("resize", () => {
