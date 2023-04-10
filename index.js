@@ -256,6 +256,10 @@ const getBubbles = () => {
   });
 };
 
+document.addEventListener("click", () => {
+  audio.play();
+});
+
 window.addEventListener("load", () => {
   audio.volume = 0.1;
   getBubbles();
