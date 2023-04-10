@@ -258,6 +258,7 @@ const getBubbles = () => {
 
 window.addEventListener("load", () => {
   audio.volume = 0.1;
+  audio.play();
   getBubbles();
   textLoad();
   setInterval(textLoad, 16000);
@@ -274,7 +275,6 @@ window.addEventListener("resize", () => {
 
 toggleMessage.addEventListener("click", () => {
   galery.classList.toggle("active");
-  audio.play();
   getSettingImage(widthGalery);
   getImageGalery();
 });
