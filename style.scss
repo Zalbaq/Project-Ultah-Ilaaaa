@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+$mainColor: #021229;
+$secondColor: #001027;
+$thirdColor: #00102780;
+$textColor: #ffffff;
+$bubbleColor1: #4fc3dc;
+$bubbleColor2: #ff2d75;
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: $mainColor;
+  display: flex;
+  flex: 1 0 auto;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+nav {
+  height: 60px;
+  width: 100%;
+  background-color: $thirdColor;
+  font-size: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    list-style: none;
+    li {
+      a {
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 1px;
+        font-size: 12px;
+        transition: all 0.2s ease;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        bottom: 0;
+        transition: all ease-out 0.3s;
+      }
+    }
+    li:hover {
+      a {
+        text-shadow: 0 0 10px #ffffff;
+      }
+      a::before {
+        width: 100%;
+      }
+    }
+  }
+}
+section {
+  padding: 70px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  span {
+    min-height: 15px;
+    min-width: 15px;
+    max-height: 15px;
+    max-width: 15px;
+    border-radius: 50%;
+    animation: animated 15s linear infinite;
+    animation-duration: calc(140s / var(--duration));
+  }
+  span:nth-child(even) {
+    background-color: $bubbleColor1;
+    box-shadow: 0 0 10px 8px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  }
+  span:nth-child(odd) {
+    background-color: $bubbleColor2;
+    box-shadow: 0 0 10px 8px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+  }
+  @keyframes animated {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.7);
+    }
+    90% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-120vh) scale(1);
+    }
+  }
+}
+#page1 {
+  .greeting {
+    position: relative;
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .text {
+    color: $textColor;
+    font-size: 34px;
+    font-weight: 600;
+  }
+  .text.first-text {
+    text-shadow: 0 0 8px $textColor;
+  }
+  .text.second-text {
+    text-shadow: 0 0 8px #00d0ff;
+    position: relative;
+    color: $bubbleColor1;
+  }
+  .text.second-text::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $mainColor;
+    border-left: 3px solid $bubbleColor1;
+    animation: typing 4s steps(12) infinite;
+  }
+  @keyframes typing {
+    40%,
+    60% {
+      left: calc(100% + 5px);
+    }
+    100% {
+      left: 0%;
+    }
+  }
+}
+#page2 {
+  .card {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $thirdColor;
+    width: 100%;
+    height: 85vh;
+    padding: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6),
+      0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
+
+    .mainImage {
+      height: 15rem;
+      width: 40%;
+      margin-bottom: 10px;
+      background-color: blue;
+      border-radius: 25px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .description {
+      font-size: 12px;
+      text-align: justify;
+      width: 100%;
+      color: $textColor;
+      text-indent: 3em;
+    }
+    .gifIcon {
+      display: flex;
+      justify-content: space-around;
+      height: 120px;
+      width: 100%;
+      .gif1,
+      .gif2,
+      .gif3 {
+        width: 100px;
+        height: 100px;
+        transition: all ease-in-out 0.2s;
+        cursor: pointer;
+      }
+      .gif1:hover,
+      .gif2:hover,
+      .gif3:hover {
+        transform: translateY(-5px) scale(1.1);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+#page3 {
+  flex-direction: column;
+  justify-content: space-between;
+  .galery {
+    z-index: 20;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .messageIcon {
+      height: 100px;
+      width: 160px;
+      position: relative;
+      border-radius: 10px;
+      background-color: #b0b0b0;
+      z-index: 100;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all ease-out 0.2s;
+      animation: messageIconAnimation linear 2s infinite;
+    }
+    @keyframes messageIconAnimation {
+      0% {
+        box-shadow: 0 0 0px $bubbleColor2;
+      }
+      50% {
+        box-shadow: 0 0 30px $bubbleColor2;
+      }
+      100% {
+        box-shadow: 0 0 0px $bubbleColor2;
+      }
+    }
+    .messageIcon::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -50%;
+      transform: translate(-50%, 0) rotate(45deg);
+      height: 100px;
+      width: 100px;
+      background-color: red;
+    }
+    li {
+      height: 50px;
+      border-radius: 50%;
+      background-color: #e3e3e330;
+      list-style: none;
+      position: absolute;
+      left: 0;
+      transform-origin: 225px;
+      transition: 0.5s;
+      border-radius: 50%;
+      box-shadow: 0 0 20px inset $textColor;
+      img {
+        transform: rotate(calc(360deg / -8 * var(--position)));
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+  .description {
+    margin-top: 20px;
+    padding: 20px 20px;
+    font-size: 12px;
+    color: $textColor;
+    text-align: justify;
+    text-indent: 3em;
+    background-color: $thirdColor;
+    border: 2px solid $textColor;
+    border-radius: 25px;
+    box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6),
+      0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
+  }
+  .questionBox {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color: $textColor;
+    gap: 20px;
+    .button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      button {
+        position: relative;
+        height: 40px;
+        padding: 0 30px;
+        border-radius: 25px;
+        background: transparent;
+        outline: none;
+        border: 1px solid $textColor;
+        color: $textColor;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.2s ease-out;
+      }
+      button:hover:nth-child(1) {
+        box-shadow: 0 0 10px 1px #ff3434;
+      }
+      button:hover:nth-child(2) {
+        box-shadow: 0 0 10px 1px $bubbleColor1;
+      }
+    }
+    img {
+      z-index: -1;
+      height: 100px;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+    }
+    img:hover {
+      scale: 1.1;
+    }
+  }
+
+  //* SAAT TERDAPAT CLASS .ACTIVE
+  .galery.active {
+    .messageIcon {
+      animation-delay: 2s;
+      background-color: $bubbleColor2;
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .messageIcon::before {
+      display: none;
+    }
+    li {
+      position: absolute;
+      transform-origin: 225px;
+      height: 80px;
+      transform: rotate(calc(360deg / 8 * var(--position)));
+      // animation: imageAnimation linear 5s infinite;
+      img {
+        transform: rotate(calc(360deg / -8 * var(--position)));
+      }
+    }
+    @keyframes imageAnimation {
+      0%,
+      90%,
+      100% {
+        box-shadow: 0 0 0px $textColor;
+        opacity: 0;
+      }
+      20%,
+      50% {
+        box-shadow: 0 0 30px $textColor;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//? DESKTOP SETTINGS
+@media (min-width: 767px) {
+  nav {
+    ul {
+      gap: 100px;
+      li {
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  section {
+    min-width: 100%;
+    height: 100vh;
+  }
+  #page1 {
+    .greeting {
+      width: 600px;
+
+      .text {
+        font-size: 48px;
+      }
+    }
+  }
+  #page2 {
+    .card {
+      position: relative;
+      height: 60vh;
+      width: 800px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .mainImage {
+        height: 100%;
+        width: 30%;
+      }
+      .description {
+        height: 100%;
+        width: 70%;
+        padding: 1rem;
+      }
+      .gifIcon {
+        position: absolute;
+        height: 10em;
+        width: 30em;
+        bottom: 5%;
+        right: 5%;
+        display: flex;
+        align-items: center;
+        .gif1,
+        .gif2,
+        .gif3 {
+          width: 150px;
+          height: 150px;
+          transition: all ease-in-out 0.2s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  #page3 {
+    display: grid;
+    grid-template-areas:
+      "galery description"
+      "galery description"
+      "galery button";
+    .galery {
+      grid-area: galery;
+      margin-right: 3rem;
+    }
+    .description {
+      font-size: 14px;
+      grid-area: description;
+    }
+    .questionBox {
+      grid-area: button;
+      .button {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+      }
+      img {
+        height: 150px;
+      }
+    }
+  }
+}
+
+//* MOBILE SETTINGS
+@media (max-width: 767px) {
+  section {
+    min-height: 100vh;
+    width: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  #page2 {
+    .card {
+      min-width: 450px;
+      max-width: 600px;
+    }
+  }
+  #page3 {
+    .questionBox {
+      img:nth-child(1) {
+        position: absolute;
+        left: 5%;
+        bottom: 0;
+      }
+      img:nth-child(3) {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+      }
+    }
+  }
+}
