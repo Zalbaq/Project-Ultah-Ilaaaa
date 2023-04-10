@@ -264,9 +264,6 @@ window.addEventListener("load", () => {
   getSizeGalery(widthGalery);
   getSettingImage(widthGalery);
 });
-window.addEventListener("scroll", () => {
-  audio.play();
-});
 
 window.addEventListener("resize", () => {
   widthGalery = Math.floor(window.innerWidth - (1 / 10) * window.innerWidth);
