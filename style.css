@@ -88,11 +88,13 @@ section {
 }
 .bubbles span:nth-child(even) {
   background-color: #4fc3dc;
-  box-shadow: 0 0 10px 8px rgba(79, 195, 220, 0.2666666667), 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  box-shadow: 0 0 10px 8px rgba(79, 195, 220, 0.2666666667), 0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
 }
 .bubbles span:nth-child(odd) {
   background-color: #ff2d75;
-  box-shadow: 0 0 10px 8px rgba(255, 45, 117, 0.2666666667), 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+  box-shadow: 0 0 10px 8px rgba(255, 45, 117, 0.2666666667), 0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
 }
 @keyframes animated {
   0% {
@@ -143,7 +145,8 @@ section {
   animation: typing 4s steps(12) infinite;
 }
 @keyframes typing {
-  40%, 60% {
+  40%,
+  60% {
     left: calc(100% + 5px);
   }
   100% {
@@ -162,7 +165,8 @@ section {
   height: 85vh;
   padding: 1rem;
   border-radius: 25px;
-  box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6), 0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
+  box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6),
+    0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
 }
 #page2 .card .mainImage {
   height: 15rem;
@@ -176,7 +180,7 @@ section {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #page2 .card .description {
   font-size: 12px;
@@ -208,7 +212,7 @@ section {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #page3 {
@@ -273,7 +277,7 @@ section {
   transform: rotate(calc(-45deg * var(--position)));
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 #page3 .description {
@@ -286,7 +290,8 @@ section {
   background-color: rgba(0, 16, 39, 0.5019607843);
   border: 2px solid #ffffff;
   border-radius: 25px;
-  box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6), 0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
+  box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6),
+    0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
 }
 #page3 .questionBox {
   height: 50px;
@@ -354,11 +359,14 @@ section {
   transform: rotate(calc(-45deg * var(--position)));
 }
 @keyframes imageAnimation {
-  0%, 90%, 100% {
+  0%,
+  90%,
+  100% {
     box-shadow: 0 0 0px #ffffff;
     opacity: 0;
   }
-  20%, 50% {
+  20%,
+  50% {
     box-shadow: 0 0 30px #ffffff;
     opacity: 1;
   }
@@ -462,4 +470,4 @@ section {
     right: 5%;
     bottom: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
