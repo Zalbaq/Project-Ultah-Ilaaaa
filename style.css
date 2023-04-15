@@ -284,7 +284,6 @@ section {
   background-color: rgba(0, 16, 39, 0.5019607843);
   border: 2px solid #ffffff;
   border-radius: 25px;
-  z-index: 9999;
   box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6), 0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
 }
 #page3 .questionBox {
@@ -317,6 +316,7 @@ section {
 }
 #page3 .questionBox .button button:nth-child(1) {
   background-color: rgba(222, 0, 0, 0.5019607843);
+  z-index: 100000;
 }
 #page3 .questionBox .button button:nth-child(2) {
   background-color: #092b57;

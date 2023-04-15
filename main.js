@@ -22,9 +22,14 @@ getSettingImage(widthGalery);
 
 buttonNo.addEventListener("mouseover", (element) => {
   element.target.style.position = "absolute";
-  element.target.style.zIndex = 111;
-  element.target.style.bottom = `${Math.floor(Math.random() * 30)}%`;
-  element.target.style.left = `${Math.floor(Math.random() * 50)}%`;
+  element.target.style.zIndex = 9999;
+  element.target.style.bottom = `${Math.floor(Math.random() * 200) + 10}%`;
+  element.target.style.left = `${Math.floor(Math.random() * 100)}%`;
+  element.target.removeEventListener("mouseover");
+});
+
+buttonNo.addEventListener("click", () => {
+  alert("Yahhhhhhhhh😰😰");
 });
 
 buttonYes.addEventListener("click", () => {
@@ -36,7 +41,6 @@ window.addEventListener("resize", () => {
   getBubbles(pageBubble);
   getSizeGalery(widthGalery);
   getSettingImage(widthGalery);
-
 });
 
 toggleMessage.addEventListener("click", () => {

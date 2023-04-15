@@ -291,7 +291,6 @@ section {
     background-color: $thirdColor;
     border: 2px solid $textColor;
     border-radius: 25px;
-    z-index: 9999;
     box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6),
       0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
   }
@@ -323,6 +322,7 @@ section {
       }
       button:nth-child(1) {
         background-color: #de000080;
+        z-index: 100000;
       }
       button:nth-child(2) {
         background-color: #092b57;
