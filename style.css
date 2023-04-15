@@ -9,8 +9,6 @@
 
 body {
   background-color: #021229;
-  display: flex;
-  flex: 1 0 auto;
 }
 
 html::-webkit-scrollbar {
@@ -286,6 +284,7 @@ section {
   background-color: rgba(0, 16, 39, 0.5019607843);
   border: 2px solid #ffffff;
   border-radius: 25px;
+  z-index: 9999;
   box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6), 0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
 }
 #page3 .questionBox {

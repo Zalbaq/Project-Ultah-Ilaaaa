@@ -16,8 +16,6 @@ $bubbleColor2: #ff2d75;
 }
 body {
   background-color: $mainColor;
-  display: flex;
-  flex: 1 0 auto;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -293,6 +291,7 @@ section {
     background-color: $thirdColor;
     border: 2px solid $textColor;
     border-radius: 25px;
+    z-index: 9999;
     box-shadow: 0 0 20px 4px rgba(216, 216, 216, 0.6),
       0 0 8px rgba(216, 216, 216, 0.6), 0 0 12px rgba(216, 216, 216, 0.6);
   }

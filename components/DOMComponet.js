@@ -28,7 +28,7 @@ export const bubbleTotal = {
   },
   breakpoint4: {
     width: 1200,
-    bubbles: 55,
+    bubbles: 45,
   },
 };
 export const heightImageGalery = {

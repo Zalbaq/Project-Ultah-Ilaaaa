@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="icon/icon-ultah.png" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>HBD Firaaaaa</title>
   </head>
   <body>
@@ -17,14 +18,14 @@
       </ul>
     </nav>
     <section id="page1">
-      <div class="greeting">
+      <div class="greeting" data-aos="fade-up">
         <span class="text first-text">Selamat Ulang Tahunn</span>
         <span class="text second-text">Hibatin Wafiroh..</span>
       </div>
       <div class="bubbles"></div>
     </section>
     <section id="page2">
-      <div class="card">
+      <div class="card" data-aos="fade-right" data-aos-duration="1500">
         <div class="mainImage">
           <img src="asset/imgMain1.jpg" alt="" />
         </div>
@@ -59,7 +60,12 @@
       <div class="bubbles"></div>
     </section>
     <section id="page3">
-      <div class="galery">
+      <div
+        class="galery"
+        data-aos="fade-right"
+        data-aos-duration="1200"
+        data-aos-delay="200"
+      >
         <div class="messageIcon">🥳🕯️</div>
         <li style="--position: 0"><img src="asset/img2.jpg" /></li>
         <li style="--position: 1"><img src="asset/img3.jpg" /></li>
@@ -70,7 +76,12 @@
         <li style="--position: 6"><img src="asset/img8.jpg" /></li>
         <li style="--position: 7"><img src="asset/img1.jpg" /></li>
       </div>
-      <div class="description">
+      <div
+        class="description"
+        data-aos="fade-left"
+        data-aos-duration="1200"
+        data-aos-delay="400"
+      >
         <p>
           HBD Ilaaaaa🥳🥳🕯️, Ehhh gx kroso ws 20 thn ee, semoga Hibatin Wafiroh
           bisa menjadi anak yg baik😇, taat, bisa membahagiakan keluarga, dan
@@ -109,7 +120,12 @@
           surat ee...🗿
         </p>
       </div>
-      <div class="questionBox">
+      <div
+        class="questionBox"
+        data-aos="fade-left"
+        data-aos-duration="1200"
+        data-aos-delay="600"
+      >
         <img src="asset/gif4.gif" alt="" />
         <div class="button">
           <button type="button" id="buttonNo">Dihhhhh</button>
@@ -125,4 +141,8 @@
     </audio>
   </body>
   <script type="module" src="main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
