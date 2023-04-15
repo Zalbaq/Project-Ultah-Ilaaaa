@@ -83,4 +83,12 @@ export const listImage = [
   "asset/img23.jpg",
   "asset/img24.jpg",
   "asset/img25.jpg",
+  "asset/img26.jpg",
+  "asset/img27.jpg",
+  "asset/img28.jpg",
+  "asset/img29.jpg",
+  "asset/img30.jpg",
+  "asset/img31.jpg",
+  "asset/img32.jpg",
+  "asset/img33.jpg",
 ];
