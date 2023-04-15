@@ -21,12 +21,12 @@ getSizeGalery(widthGalery);
 getSettingImage(widthGalery);
 
 buttonNo.addEventListener("mouseenter", (element) => {
-document.getElementById("myButton").disabled = true
+element.target.disabled = true
   element.target.style.position = "absolute";
   element.target.style.zIndex = 111;
   element.target.style.bottom = `${Math.floor(Math.random() * 30)}%`;
   element.target.style.left = `${Math.floor(Math.random() * 50)}%`;
-document.getElementById("myButton").disabled = false
+element.target.disabled = false
 });
 
 buttonYes.addEventListener("click", () => {
