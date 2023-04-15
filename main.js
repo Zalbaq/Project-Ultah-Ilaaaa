@@ -20,7 +20,7 @@ setInterval(textLoad, 16000);
 getSizeGalery(widthGalery);
 getSettingImage(widthGalery);
 
-buttonNo.addEventListener("mouseenter", (element) => {
+buttonNo.addEventListener("click", (element) => {
   element.target.style.position = "absolute";
   element.target.style.zIndex = 111;
   element.target.style.bottom = `${Math.floor(Math.random() * 30)}%`;
