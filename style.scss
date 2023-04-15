@@ -19,7 +19,7 @@ body {
   display: flex;
   flex: 1 0 auto;
 }
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 nav {
@@ -30,7 +30,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
   ul {
     height: 100%;
     display: flex;
@@ -94,11 +94,11 @@ section {
   }
   span:nth-child(even) {
     background-color: $bubbleColor1;
-    box-shadow: 0 0 10px 8px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    box-shadow: 0 0 10px 8px #4fc3dc44, 0 0 25px #4fc3dc, 0 0 50px #4fc3dc;
   }
   span:nth-child(odd) {
     background-color: $bubbleColor2;
-    box-shadow: 0 0 10px 8px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+    box-shadow: 0 0 10px 8px #ff2d7544, 0 0 25px #ff2d75, 0 0 50px #ff2d75;
   }
   @keyframes animated {
     0% {
@@ -110,7 +110,7 @@ section {
     }
     100% {
       opacity: 0;
-      transform: translateY(-120vh) scale(1);
+      transform: translateY(-100vh) scale(1);
     }
   }
 }
@@ -286,7 +286,7 @@ section {
   .description {
     margin-top: 20px;
     padding: 20px 20px;
-    font-size: 12px;
+    font-size: 10px;
     color: $textColor;
     text-align: justify;
     text-indent: 3em;
@@ -322,10 +322,18 @@ section {
         overflow: hidden;
         transition: all 0.2s ease-out;
       }
+      button:nth-child(1) {
+        background-color: #de000080;
+      }
+      button:nth-child(2) {
+        background-color: #092b57;
+      }
       button:hover:nth-child(1) {
+        background-color: #ff0000;
         box-shadow: 0 0 10px 1px #ff3434;
       }
       button:hover:nth-child(2) {
+        background-color: #006eaa;
         box-shadow: 0 0 10px 1px $bubbleColor1;
       }
     }
@@ -382,7 +390,7 @@ section {
 }
 
 //? DESKTOP SETTINGS
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   nav {
     ul {
       gap: 100px;
@@ -400,7 +408,6 @@ section {
   #page1 {
     .greeting {
       width: 600px;
-
       .text {
         font-size: 48px;
       }
@@ -446,11 +453,10 @@ section {
     display: grid;
     grid-template-areas:
       "galery description"
-      "galery description"
       "galery button";
+    column-gap: 50px;
     .galery {
       grid-area: galery;
-      margin-right: 3rem;
     }
     .description {
       font-size: 14px;

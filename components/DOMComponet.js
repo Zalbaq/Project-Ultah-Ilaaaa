@@ -11,6 +11,7 @@ export let widthGalery = Math.floor(
   window.innerWidth - (1 / 10) * window.innerWidth
 );
 export const audio = document.querySelector("audio");
+export const buttonNo = document.querySelector("#buttonNo");
 export const bubbleTotal = {
   breakpoint1: {
     width: 480,

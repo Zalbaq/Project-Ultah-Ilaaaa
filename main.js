@@ -8,20 +8,22 @@ import {
   audio,
   galery,
   pageBubble,
+  buttonNo,
 } from "./components/DOMComponet.js";
 let widthGalery = Math.floor(window.innerWidth - (1 / 10) * window.innerWidth);
 
-document.addEventListener("click", () => {
-  audio.play();
-});
+audio.volume = 0.1;
+getBubbles(pageBubble);
+textLoad();
+setInterval(textLoad, 16000);
+getSizeGalery(widthGalery);
+getSettingImage(widthGalery);
 
-window.addEventListener("load", () => {
-  audio.volume = 0.1;
-  getBubbles(pageBubble);
-  textLoad();
-  setInterval(textLoad, 16000);
-  getSizeGalery(widthGalery);
-  getSettingImage(widthGalery);
+buttonNo.addEventListener("mouseenter", (element) => {
+  element.target.style.position = "absolute";
+  element.target.style.zIndex = 111;
+  element.target.style.bottom = `${Math.floor(Math.random() * 30)}%`;
+  element.target.style.left = `${Math.floor(Math.random() * 50)}%`;
 });
 
 window.addEventListener("resize", () => {
@@ -32,6 +34,7 @@ window.addEventListener("resize", () => {
 });
 
 toggleMessage.addEventListener("click", () => {
+  audio.play();
   galery.classList.toggle("active");
   getSettingImage(widthGalery);
   changeImageInGalery();
