@@ -9,6 +9,7 @@ import {
   galery,
   pageBubble,
   buttonNo,
+  buttonYes,
 } from "./components/DOMComponet.js";
 let widthGalery = Math.floor(window.innerWidth - (1 / 10) * window.innerWidth);
 
@@ -24,6 +25,10 @@ buttonNo.addEventListener("mouseenter", (element) => {
   element.target.style.zIndex = 111;
   element.target.style.bottom = `${Math.floor(Math.random() * 30)}%`;
   element.target.style.left = `${Math.floor(Math.random() * 50)}%`;
+});
+
+buttonYes.addEventListener("click", () => {
+  alert("Makasihhh Ilaaaaa🤗🥳");
 });
 
 window.addEventListener("resize", () => {
