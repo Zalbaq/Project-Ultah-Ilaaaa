@@ -25,7 +25,7 @@ buttonNo.addEventListener("mouseover", (element) => {
   element.target.style.zIndex = 9999;
   element.target.style.bottom = `${Math.floor(Math.random() * 200) + 10}%`;
   element.target.style.left = `${Math.floor(Math.random() * 100)}%`;
-  element.target.removeEventListener("mouseover");
+  element.target.removeEventListener("mouseover", () => {});
 });
 
 buttonNo.addEventListener("click", () => {

@@ -14,9 +14,6 @@ $bubbleColor2: #ff2d75;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
-body {
-  background-color: $mainColor;
-}
 html::-webkit-scrollbar {
   display: none;
 }
@@ -68,6 +65,7 @@ nav {
   }
 }
 section {
+  background-color: $mainColor;
   padding: 70px 25px;
   display: flex;
   align-items: center;
@@ -493,14 +491,15 @@ section {
   }
   #page3 {
     .questionBox {
+      position: relative;
       img:nth-child(1) {
         position: absolute;
-        left: 5%;
+        left: 0;
         bottom: 0;
       }
       img:nth-child(3) {
         position: absolute;
-        right: 5%;
+        right: 0;
         bottom: 0;
       }
     }
