@@ -20,7 +20,7 @@ setInterval(textLoad, 16000);
 getSizeGalery(widthGalery);
 getSettingImage(widthGalery);
 
-buttonNo.addEventListener("mouseenter", (element) => {
+buttonNo.addEventListener("mouseover", (element) => {
   element.target.style.position = "absolute";
   element.target.style.zIndex = 111;
   element.target.style.bottom = `${Math.floor(Math.random() * 30)}%`;
@@ -36,6 +36,7 @@ window.addEventListener("resize", () => {
   getBubbles(pageBubble);
   getSizeGalery(widthGalery);
   getSettingImage(widthGalery);
+
 });
 
 toggleMessage.addEventListener("click", () => {
