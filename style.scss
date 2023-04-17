@@ -380,6 +380,20 @@ section {
           background-color: #006eaa;
           box-shadow: 0 0 10px 1px $bubbleColor1;
         }
+        button:hover:nth-child(1),
+        button:active:nth-child(1) {
+          animation: shake 1s infinite;
+        }
+        @keyframes shake {
+          10%,
+          50% {
+            transform: rotate(5deg);
+          }
+          30%,
+          70% {
+            transform: rotate(-5deg);
+          }
+        }
       }
     }
   }

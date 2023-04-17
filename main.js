@@ -20,16 +20,16 @@ setInterval(textLoad, 16000);
 getSizeGalery(widthGalery);
 getSettingImage(widthGalery);
 
-buttonNo.addEventListener("mouseover", (element) => {
-  element.target.style.position = "absolute";
-  element.target.style.zIndex = 9999;
-  element.target.style.bottom = `${Math.floor(Math.random() * 50) + 10}%`;
-  element.target.style.left = `${Math.floor(Math.random() * 80)}%`;
-});
+// buttonNo.addEventListener("mouseover", (element) => {
+//   element.target.style.position = "absolute";
+//   element.target.style.zIndex = 9999;
+//   element.target.style.bottom = `${Math.floor(Math.random() * 50) + 10}%`;
+//   element.target.style.left = `${Math.floor(Math.random() * 80)}%`;
+// });
 
-buttonNo.addEventListener("click", () => {
-  alert("Yahhhhhhhhh😰😰");
-});
+// buttonNo.addEventListener("click", () => {
+//   alert("Yahhhhhhhhh😰😰");
+// });
 
 buttonYes.addEventListener("click", () => {
   alert("Makasihhh Ilaaaaa🤗🥳");
